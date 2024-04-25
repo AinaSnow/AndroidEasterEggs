@@ -46,8 +46,3 @@ jobs:
       run: |
         bundle install 
         bundle exec fastlane install_plugins
-
-    - name: Build with Fastlane
-      env:
-        PGYER_API_KEY: ${{ secrets.PGYER_API_KEY }}
-      run: bundle exec fastlane beta PGYER_API_KEY:${{ secrets.PGYER_API_KEY }}
